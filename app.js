@@ -26,6 +26,7 @@ require('express-async-errors');
 const formsRouter=require("./routes/form.router")
 const authRouter=require("./routes/auth_router")
 const authenticateUser = require('./middlewares/authentication');
+const userreport=require("./routes/userReport_router")
 //importing errors
 //const errorhandler=require("./middlewares/error-handler");
 //using routes 
@@ -34,6 +35,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use('/api/v1/forms',formsRouter);
 app.use('/api/v1/auth',authRouter);
 app.use('/sift/details' ,siftRouter)
+app.use("/api/v1/reportuser",userreport);
 //using errors
 //app.use(errorhandler)
 //connecting port

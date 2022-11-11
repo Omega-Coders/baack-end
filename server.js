@@ -13,9 +13,9 @@ const server = http.createServer(app);
 const connectdb = require("./db/connect");
 
 require('dotenv').config()
-const start =async ()=>{
+const start = async ()=>{
     try {
-        await connectdb(process.env.MONGO_URI);
+      await connectdb(process.env.MONGO_URI);
         server.listen(PORT, ()=> {
             console.log(`listening to ${PORT}`);
         })

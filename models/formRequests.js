@@ -32,7 +32,19 @@ const RequestFormSchema = mongoose.Schema({
         type: String,
         required: [true, 'Please provide Image'],
       }
+      ,accept: {
+        type:Boolean,
+        required:[true, "please provide a status"],
+        default:null
+      },
+      reject: {
+        type:String,
+        required:[true, "please provide a status"],
+        default:null
+      }
+
 });
+
 
 
 
