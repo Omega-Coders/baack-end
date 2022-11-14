@@ -6,7 +6,7 @@ const {createform,getallforminfo,getforminfo, getAllRequests, postRequest, getRe
 
 
 router.route('/').get(getallforminfo).post(createform);
-router.route('/:id').get(getforminfo);
+//router.route('/:id').get(getforminfo);
 router.route('/requests').get(getAllRequests).post(postRequest)
 router.route('/requests/:id').get(getRequestById)
 
